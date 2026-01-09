@@ -1,2 +1,0 @@
-# BBDD
-querytest
