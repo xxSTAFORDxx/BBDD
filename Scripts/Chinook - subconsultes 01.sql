@@ -116,13 +116,11 @@ FROM Customer c
 JOIN Invoice i ON c.CustomerId = i.CustomerId
 JOIN InvoiceLine il ON i.InvoiceId = il.InvoiceId
 GROUP BY c.CustomerId, c.FirstName, c.LastName
-HAVING SUM(il.Quantity) = (
-    SELECT SUM(il2.Quantity)
-    FROM Customer c2
-    JOIN Invoice i2 ON c2.CustomerId = i2.CustomerId
-    JOIN InvoiceLine il2 ON i2.InvoiceId = il2.InvoiceId
-    WHERE c2.FirstName = 'Camille' AND c2.LastName = 'Bernard'
-)
+HAVING SUM(il.Quantity) = (SELECT SUM(il2.Quantity)
+    					   FROM Customer c2
+    					   JOIN Invoice i2 ON c2.CustomerId = i2.CustomerId
+    					   JOIN InvoiceLine il2 ON i2.InvoiceId = il2.InvoiceId
+    					   WHERE c2.FirstName = 'Camille' AND c2.LastName = 'Bernard')
 ORDER BY c.CustomerId;
 
 -- 10
