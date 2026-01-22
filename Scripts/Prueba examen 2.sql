@@ -83,17 +83,12 @@ ORDER BY state_province
 -- Ordena’ls per nom i cognom
 
 SELECT id, first_name, last_name
-FROM (
-    SELECT c.id, c.first_name, c.last_name, t.ultima_fecha
-    FROM customers c
-    JOIN (
-        SELECT customer_id, MAX(order_date) AS ultima_fecha
-        FROM orders
-        GROUP BY customer_id
-    ) t ON c.id = t.customer_id
-    ORDER BY t.ultima_fecha DESC
-    LIMIT 10
-) x
+FROM (SELECT c.id, c.first_name, c.last_name, t.ultima_fecha
+      FROM customers c JOIN (SELECT customer_id, MAX(order_date) AS ultima_fecha
+            				 FROM orders
+            				 GROUP BY customer_id) t ON c.id = t.customer_id
+    						 ORDER BY t.ultima_fecha DESC
+    						 LIMIT 10) x
 ORDER BY first_name, last_name;
 
 -- 9

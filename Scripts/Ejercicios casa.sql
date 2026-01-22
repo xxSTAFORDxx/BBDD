@@ -182,8 +182,8 @@ ORDER BY MAX(od.product_id ) DESC)
 
 SELECT t.product_id, t.product_name, t.total_sold 
 FROM (SELECT od.product_id, p.product_name,  SUM(od.quantity)AS total_sold
-FROM products p JOIN order_details od  ON p.id = od.product_id
-group by od.product_id, p.product_name )AS t
+	  FROM products p JOIN order_details od  ON p.id = od.product_id
+	  group by od.product_id, p.product_name )AS t
 ORDER BY t.total_sold DESC 
 limit 3
 
