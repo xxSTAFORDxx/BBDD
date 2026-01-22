@@ -80,15 +80,21 @@ HAVING COUNT(o.id) = (SELECT count(o2.customer_id)AS total_pedidos
 	WHERE o.order_date = "2006-03-24" 
 	GROUP BY c.id, c.first_name, c.last_name
 
-	-- 9
+-- 9
 
-SELECT p.product_name 
-FROM products p JOIN order_details od ON od.product_id = p.id
-GROUP BY od.product_id 
-HAVING count(od.product_id)
-ORDER BY p.product_name 
-limit 2;
+SELECT t.product_name
+FROM (SELECT p.product_name, count(od.order_id )AS total_comandes
+FROM products p JOIN order_details od  ON p.id = od.product_id
+group by  p.product_name ORDER BY total_comandes desc limit 2)AS t
+ORDER BY t.product_name asc 
 
-SELECT COUNT(product_id)
-from order_details od
-group by od.product_id 
+-- 10
+
+SELECT p.product_name
+FROM products p
+WHERE p.list_price < ALL (
+    SELECT p2.standard_cost
+    FROM products p2
+    WHERE p2.category = 'Pasta'
+)
+ORDER BY p.id;
