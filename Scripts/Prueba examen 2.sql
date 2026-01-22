@@ -82,16 +82,19 @@ ORDER BY state_province
 -- Mostra l’id, nom i cognom dels 10 últims clients que ens han fet alguna comanda. 
 -- Ordena’ls per nom i cognom
 
-select distinct c.id, c.first_name, c.last_name
-from customers c
-where c.id in (
-			select * from (
-				select o.customer_id
-				from orders o
-				order by o.order_date desc
-			) as t)
-order by c.first_name, c.last_name
-limit 10;
+SELECT id, first_name, last_name
+FROM (
+    SELECT c.id, c.first_name, c.last_name, t.ultima_fecha
+    FROM customers c
+    JOIN (
+        SELECT customer_id, MAX(order_date) AS ultima_fecha
+        FROM orders
+        GROUP BY customer_id
+    ) t ON c.id = t.customer_id
+    ORDER BY t.ultima_fecha DESC
+    LIMIT 10
+) x
+ORDER BY first_name, last_name;
 
 -- 9
 -- Saber el product_code i categoria dels productes que no tinguin quantity_per_unit o no tinguin minimum_reorder_quantity.
