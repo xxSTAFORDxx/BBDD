@@ -1,6 +1,6 @@
 	drop database extraescolars; -- borra base de datos
 	drop database if exists extraescolars; -- borra base de datos si la encuentra
-	create database extraescolars; -- crea base de datos
+	create database if not exists extraescolars; -- crea base de datos
 	
 	use extraescolars;
 	
@@ -139,3 +139,5 @@ where id_poblacio != (select id_poblacio
 	from escoles);
 	
 	-- digues les escoles de 'Sabadell' on s'ofereix 'escacs'
+	
+	
