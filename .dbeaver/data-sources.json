@@ -36,6 +36,41 @@
 				},
 				"auth-model": "native"
 			}
+		},
+		"postgres-jdbc-19cd82e2e59-572c060fae576938": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:5432/postgres",
+				"configurationType": "MANUAL",
+				"home": "postgresql-x64-18",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"properties": {
+					"connectTimeout": "20",
+					"loginTimeout": "20",
+					"escapeSyntaxCallMode": "callIfNoReturn"
+				},
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "true",
+					"@dbeaver-chosen-role@": "",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"read-keys-with-columns": "false",
+					"replace-legacy-timezone": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native"
+			}
 		}
 	},
 	"virtual-models": {"mariaDB-19c0014b8dd-602a8143908f710e":{"ies25":{"@properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202603031958\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mariaDB-19c0014b8dd-602a8143908f710e\"\u003e\u003centity id\u003d\"1\" name\u003d\"accessos\" fq-name\u003d\"ies25.accessos\" order\u003d\"0\" x\u003d\"40\" y\u003d\"325\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"alumnes\" fq-name\u003d\"ies25.alumnes\" order\u003d\"1\" x\u003d\"221\" y\u003d\"89\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"aules\" fq-name\u003d\"ies25.aules\" order\u003d\"2\" x\u003d\"436\" y\u003d\"406\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"blocs\" fq-name\u003d\"ies25.blocs\" order\u003d\"3\" x\u003d\"223\" y\u003d\"541\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"cicles\" fq-name\u003d\"ies25.cicles\" order\u003d\"4\" x\u003d\"579\" y\u003d\"408\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"6\" name\u003d\"grups\" fq-name\u003d\"ies25.grups\" order\u003d\"5\" border-width\u003d\"3\" x\u003d\"413\" y\u003d\"123\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"7\" name\u003d\"modul_grup\" fq-name\u003d\"ies25.modul_grup\" order\u003d\"6\" x\u003d\"228\" y\u003d\"385\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"8\" name\u003d\"moduls\" fq-name\u003d\"ies25.moduls\" order\u003d\"7\" x\u003d\"421\" y\u003d\"590\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"9\" name\u003d\"moduls_convalidar\" fq-name\u003d\"ies25.moduls_convalidar\" order\u003d\"8\" x\u003d\"217\" y\u003d\"715\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"10\" name\u003d\"professors\" fq-name\u003d\"ies25.professors\" order\u003d\"9\" x\u003d\"631\" y\u003d\"84\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"11\" name\u003d\"qualificacions\" fq-name\u003d\"ies25.qualificacions\" order\u003d\"10\" x\u003d\"40\" y\u003d\"101\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"12\" name\u003d\"resultats\" fq-name\u003d\"ies25.resultats\" order\u003d\"11\" x\u003d\"19\" y\u003d\"636\"\u003e\u003cpath name\u003d\"ies25\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"accessos_ibfk_1\" fq-name\u003d\"ies25.accessos.accessos_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"qualificacions_ibfk_2\" fq-name\u003d\"ies25.qualificacions.qualificacions_ibfk_2\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"11\"/\u003e\u003crelation name\u003d\"modul_grup_ibfk_3\" fq-name\u003d\"ies25.modul_grup.modul_grup_ibfk_3\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"7\"/\u003e\u003crelation name\u003d\"ras_bas_fk\" fq-name\u003d\"ies25.resultats.ras_bas_fk\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"12\"/\u003e\u003crelation name\u003d\"grups_ibfk_2\" fq-name\u003d\"ies25.grups.grups_ibfk_2\" type\u003d\"fk\" pk-ref\u003d\"5\" fk-ref\u003d\"6\"/\u003e\u003crelation name\u003d\"moduls_ibfk_1\" fq-name\u003d\"ies25.moduls.moduls_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"5\" fk-ref\u003d\"8\"/\u003e\u003crelation name\u003d\"alumnes_ibfk_1\" fq-name\u003d\"ies25.alumnes.alumnes_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"modul_grup_ibfk_2\" fq-name\u003d\"ies25.modul_grup.modul_grup_ibfk_2\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"7\"/\u003e\u003crelation name\u003d\"blocs_ibfk_1\" fq-name\u003d\"ies25.blocs.blocs_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"8\" fk-ref\u003d\"4\"/\u003e\u003crelation name\u003d\"modul_grup_ibfk_1\" fq-name\u003d\"ies25.modul_grup.modul_grup_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"8\" fk-ref\u003d\"7\"/\u003e\u003crelation name\u003d\"moduls_convalidar_ibfk_1\" fq-name\u003d\"ies25.moduls_convalidar.moduls_convalidar_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"8\" fk-ref\u003d\"9\"/\u003e\u003crelation name\u003d\"moduls_convalidar_ibfk_2\" fq-name\u003d\"ies25.moduls_convalidar.moduls_convalidar_ibfk_2\" type\u003d\"fk\" pk-ref\u003d\"8\" fk-ref\u003d\"9\"/\u003e\u003crelation name\u003d\"qualificacions_ibfk_1\" fq-name\u003d\"ies25.qualificacions.qualificacions_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"8\" fk-ref\u003d\"11\"/\u003e\u003crelation name\u003d\"resultats_ibfk_1\" fq-name\u003d\"ies25.resultats.resultats_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"8\" fk-ref\u003d\"12\"/\u003e\u003crelation name\u003d\"grups_ibfk_1\" fq-name\u003d\"ies25.grups.grups_ibfk_1\" type\u003d\"fk\" pk-ref\u003d\"10\" fk-ref\u003d\"6\"/\u003e\u003crelation name\u003d\"modul_grup_ibfk_4\" fq-name\u003d\"ies25.modul_grup.modul_grup_ibfk_4\" type\u003d\"fk\" pk-ref\u003d\"10\" fk-ref\u003d\"7\"/\u003e\u003crelation name\u003d\"qualificacions_ibfk_3\" fq-name\u003d\"ies25.qualificacions.qualificacions_ibfk_3\" type\u003d\"fk\" pk-ref\u003d\"10\" fk-ref\u003d\"11\"\u003e\u003cbend type\u003d\"abs\" x\u003d\"230\" y\u003d\"10\"/\u003e\u003cbend type\u003d\"abs\" x\u003d\"436\" y\u003d\"10\"/\u003e\u003c/relation\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}},
